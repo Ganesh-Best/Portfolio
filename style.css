@@ -1,0 +1,138 @@
+/* Defining Variables */
+:root{
+--seconday:#ccc;
+--primary:#FFF;
+--dark:#333; 
+--shadow:  0 1px 5px rgba(104,104,104,0.8);
+}
+
+
+html{
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   box-sizing: border-box; 
+}
+
+body{
+    padding:1px 40px;
+    background-color: var(--seconday);
+}
+
+/* properties apply on button */
+.wrapper .btn{
+   padding:1.3rem 1.2rem;
+   text-decoration: none;
+   color:var(--primary);
+   background-color: var(--dark);
+   font-size:1.2rem;
+   font-weight: bold;
+   border-radius:10px;;
+   -webkit-border-radius:10px;
+   -moz-border-radius:10px;
+   -ms-border-radius:10px;
+   -o-border-radius:10px;
+}
+/* properties apply when hover on button  */
+.wrapper .btn:hover{
+ color:white;
+ background-color: black;
+ box-shadow: var(--shadow
+ );
+}
+
+/* Properties apply on ul of navbar element */
+.wrapper header nav #list{
+ display:grid;
+ grid-template-columns: repeat(5,1fr);
+ list-style: none;
+ /* border:2px solid black; */
+ grid-gap:20px;
+ padding-left: 0rem;
+ padding-top:1.7rem;
+}
+
+/* Properties apply on anchor of navbar */
+.wrapper header nav #list .element{
+   text-decoration: none;
+   /* border:1px solid black;  */
+   display:block;
+   background-color: var(--primary);
+   text-align: center;
+   padding:1.2rem 1.9rem;
+   font-size:1.5rem;
+   color:var(--dark);
+   box-shadow:var(--shadow);
+}
+
+/* Properties apply when hover on anchor of navbar */
+.wrapper header nav #list .element:hover{
+    background-color:var(--dark);
+    color:var(--primary);
+    font-weight: bold;
+    
+}
+
+
+
+/* Properties apply on left-box  of main_box */
+.wrapper #main_box .left-box{
+ grid-area:left-box; 
+ background:url('img2.jpg');
+ background-size:cover;
+ background-position: center;
+ min-height: 340px;
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ color:var(--primary);
+ padding:0.9rem 1.9rem;
+}
+
+.wrapper #main_box .left-box h2{
+    font-size:4.2rem;
+    margin-bottom:0.3rem;
+}
+
+.wrapper #main_box .left-box p{
+    font-size:1.34rem;
+    margin-bottom:0.3rem;
+}
+
+
+.wrapper #main_box .right-box-a{
+    grid-area:right-box-a;
+   
+}
+   
+.wrapper #main_box .right-box-b{
+    grid-area:right-box-b;  
+}
+
+.wrapper #main_box .right-box-b , .wrapper #main_box .right-box-a {
+
+    background-color: var(--primary);
+    padding:1.3rem 1.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    box-shadow: var(--shadow);
+
+}
+
+.wrapper #main_box .right-box-b h3 , .wrapper #main_box .right-box-a h3{
+ font-size:1.9rem;
+}
+
+.wrapper #main_box .right-box-b p , .wrapper #main_box .right-box-a p{
+font-size:1.5rem;
+margin-top:2px;
+}
+.wrapper  #main_box{
+ display:grid;
+ grid-template-areas: 
+ 'left-box left-box left-box right-box-a'
+ 'left-box left-box left-box right-box-b'
+ ;
+ grid-gap:20px;
+}
